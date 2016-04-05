@@ -1,3 +1,18 @@
+/******************************************************************************/
+// http server
+/******************************************************************************/
+
+var express = require('express');
+var app = express();
+
+app.get('/', function(req, res) {
+    res.send('Endo-Bot is running now.');
+});
+
+app.listen(3000);
+
+/******************************************************************************/
+
 if (!process.env.token) {
     console.log('Error: Specify token in environment');
     process.exit(1);
