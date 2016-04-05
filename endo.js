@@ -50,7 +50,7 @@ controller.hears(['ゲーム'], ['direct_mention','direct_message','mention'], f
 
 controller.hears(['遠藤'], ['ambient'], function(bot, message) {
     bot.reply(message, 'なに？');
-    bot.reply(message, 'てかさぁ');
+    bot.reply(message, 'てかさぁ，Timaiぃ');
 });
 
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
