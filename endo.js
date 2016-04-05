@@ -60,10 +60,10 @@ controller.hears(['フルハウスのテーマ'], ['ambient','direct_message'], 
     bot.reply(message, msg2);
 });
 
-controller.hears(['ゲーム'], ['direct_mention','direct_message','mention'], function(bot, message) {
+controller.hears(['環奈'], ['ambient','direct_message'], function(bot, message) {
     bot.reply(message, 'http://endo-bot.azurewebsites.net/img/kanna01.jpg');
 });
-    
+
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
 
     bot.api.reactions.add({
