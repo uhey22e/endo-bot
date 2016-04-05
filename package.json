@@ -1,8 +1,8 @@
 {
   "name": "endo_bot",
-  "version": "3.8.5",
+  "version": "0.12.4",
   "description": "",
-  "main": "endo.js",
+  "main": "app.js",
   "scripts": {
     "start": "token=xoxb-32022645750-lsFzKQCukenC9hkkzyx3yEZu node endo.js"
   },
