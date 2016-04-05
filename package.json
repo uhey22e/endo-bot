@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "token=xoxb-32022645750-lsFzKQCukenC9hkkzyx3yEZu node endo.js"
+    "start": "token=xoxb-32022645750-lsFzKQCukenC9hkkzyx3yEZu node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "botkit": "0.0.15"
+    "botkit": "0.0.15",
+    "express": "*"
   }
 }
