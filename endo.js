@@ -49,10 +49,6 @@ controller.hears(['フルハウスのテーマ'], ['ambient','direct_message'], 
     bot.reply(message, msg2);
 });
 
-controller.hears(['環奈'], ['ambient','direct_message'], function(bot, message) {
-    bot.reply(message, 'https://www.dropbox.com/s/1r4geqbnyf97tai/kanna01.jpg?dl=0');
-});
-
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
 
     bot.api.reactions.add({
