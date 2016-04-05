@@ -79,3 +79,14 @@ controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', funct
         }
     });
 });
+
+/******************************************************************************/
+// webserver settings
+/******************************************************************************/
+
+controller.setupWebserver(process.env.port, (err, webserver) => {
+    webserver.get('/', (req, res) => {
+        res.send('Endo-Bot is running now.');
+    });
+    controller.createWebhookEndpoints(webserver);
+});
