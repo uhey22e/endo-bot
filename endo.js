@@ -30,7 +30,14 @@ controller.hears(['進捗'], 'direct_mention,direct_message,mention', function(b
 
 controller.hears(['修論'], ['direct_mention','direct_message','mention'], function(bot, message) {
     var rand = Math.floor(Math.random() * 40) + 60;
-    bot.reply(message, '今' + rand + 'ページ');
+
+    if (rand < 70) {
+        bot.reply(message, 'まだ' + rand + 'ページっすね…');
+    } else if (rand < 90) {
+        bot.reply(message, '今' + rand + 'ページ');
+    } else {
+        bot.reply(message, rand + 'ページまで書いたぞ!!');
+    }
 });
 
 controller.hears(['ゲーム'], ['direct_mention','direct_message','mention'], function(bot, message) {
