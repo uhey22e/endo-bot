@@ -1,10 +1,10 @@
 {
-  "name": "endo_bot",
+  "name": "endo-bot",
   "version": "0.12.4",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "token=xoxb-32022645750-lsFzKQCukenC9hkkzyx3yEZu node app.js"
+    "start": "./start.sh"
   },
   "author": "",
   "license": "ISC",
