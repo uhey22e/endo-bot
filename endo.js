@@ -1,16 +1,5 @@
 /******************************************************************************/
-// http server
-/******************************************************************************/
-
-var express = require('express');
-var app = express();
-
-app.get('/', function(req, res) {
-    res.send('Endo-Bot is running now.');
-});
-
-app.listen(5000);
-
+// initial settings
 /******************************************************************************/
 
 if (!process.env.token) {
@@ -61,7 +50,7 @@ controller.hears(['フルハウスのテーマ'], ['ambient','direct_message'], 
 });
 
 controller.hears(['環奈'], ['ambient','direct_message'], function(bot, message) {
-    bot.reply(message, 'http://endo-bot.azurewebsites.net/img/kanna01.jpg');
+    bot.reply(message, 'https://www.dropbox.com/s/1r4geqbnyf97tai/kanna01.jpg?dl=0');
 });
 
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
