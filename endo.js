@@ -37,11 +37,11 @@ controller.hears('進捗*', ['direct_mention'], function(bot, message) {
     bot.reply(message, 'ダメっすねー');
 });
 
-controller.hears('修論*', ['direct_mention'], function(bot, message) {
+controller.hears('^.*修論.*', ['direct_mention'], function(bot, message) {
     bot.reply(message, '今76ページ');
 });
 
-controller.hears('ゲーム*', ['direct_mention'], function(bot, message) {
+controller.hears('^.*ゲーム.*', ['direct_mention'], function(bot, message) {
     bot.reply(message, 'https://www.gamecity.ne.jp/doax3/');
 });
 
@@ -49,6 +49,8 @@ controller.hears('遠藤*', ['ambient'], function(bot, message) {
     bot.reply(message, 'なに？');
     bot.reply(message, 'てかさぁ');
 })
+
+controller.hears('')
 
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
 
