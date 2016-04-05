@@ -4,7 +4,7 @@
   "description": "",
   "main": "endo.js",
   "scripts": {
-    "start": "node endo.js"
+    "start": "token=xoxb-32022645750-lsFzKQCukenC9hkkzyx3yEZu node endo.js"
   },
   "author": "",
   "license": "ISC",
