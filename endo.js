@@ -53,6 +53,11 @@ controller.hears(['遠藤'], ['ambient'], function(bot, message) {
     bot.reply(message, 'てかさぁ，Timaiぃ');
 });
 
+controller.hears(['フルハウスのテーマ'], ['ambient'], function(bot, message) {
+    var msg = 'アーアーアーアー　アッーーー！\nウェネバハぺツー　デットビーティー\nユーメーナ　ペーパボーイ　イーベンティービー\nナゲットレバヒユ　ソバニチョウノプリーン\nソーウォー　コンフューズニーーーン\nクラーズ　ニーダン　ネーバスィーン （チェーイ）\nノバー　ノージョーチュー\nデモニドー　ボーエンシュンワイチューニスパー\nドンステーヨー　ドゥリーソンツウゥーー\nエビウェイユーロー　エビウェーイ\nイザハー　イザハー\nアキーノホン　ホンチュー\nエビウェイユーロー　エビウェイ\nイザ　メイス　サンバニドゥ　ニージュー\nエビウェイユーロー　ゥロシャーペーン ロードノーン\nクライドゥ　ウエイジュー\nトュケピドゥ　オーーン\nエビウェイユー　\nエビウェーユー　オーーン\nドゥビドゥ　バッバダー\n';
+    bot.reply(message, msg);
+})
+
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
 
     bot.api.reactions.add({
