@@ -1,10 +1,10 @@
 {
   "name": "endo_bot",
-  "version": "1.0.0",
+  "version": "3.8.5",
   "description": "",
-  "main": "index.js",
+  "main": "endo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "token=xoxb-32022645750-lsFzKQCukenC9hkkzyx3yEZu node endo.js"
   },
   "author": "",
   "license": "ISC",
