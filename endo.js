@@ -41,7 +41,10 @@ controller.hears(['修論'], ['direct_mention','direct_message','mention'], func
 });
 
 controller.hears(['ゲーム'], ['direct_mention','direct_message','mention'], function(bot, message) {
-    bot.reply(message, 'https://www.gamecity.ne.jp/doax3/');
+    var games = ['doax3/', 'zelda-3ds/', 'smusou7e/'];
+    var random = games[Math.floor(Math.random() * games.length)];
+    bot.reply(message, 'これなんてどうすか');
+    bot.reply(message, 'https://www.gamecity.ne.jp/' + random);
 });
 
 controller.hears(['遠藤'], ['ambient'], function(bot, message) {
