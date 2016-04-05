@@ -53,11 +53,17 @@ controller.hears(['遠藤'], ['ambient'], function(bot, message) {
     bot.reply(message, 'てかさぁ，Timaiぃ');
 });
 
-controller.hears(['フルハウスのテーマ'], ['ambient'], function(bot, message) {
-    var msg = 'アーアーアーアー　アッーーー！\nウェネバハぺツー　デットビーティー\nユーメーナ　ペーパボーイ　イーベンティービー\nナゲットレバヒユ　ソバニチョウノプリーン\nソーウォー　コンフューズニーーーン\nクラーズ　ニーダン　ネーバスィーン （チェーイ）\nノバー　ノージョーチュー\nデモニドー　ボーエンシュンワイチューニスパー\nドンステーヨー　ドゥリーソンツウゥーー\nエビウェイユーロー　エビウェーイ\nイザハー　イザハー\nアキーノホン　ホンチュー\nエビウェイユーロー　エビウェイ\nイザ　メイス　サンバニドゥ　ニージュー\nエビウェイユーロー　ゥロシャーペーン ロードノーン\nクライドゥ　ウエイジュー\nトュケピドゥ　オーーン\nエビウェイユー　\nエビウェーユー　オーーン\nドゥビドゥ　バッバダー\n';
-    bot.reply(message, msg);
-})
+controller.hears(['フルハウスのテーマ'], ['ambient','direct_message'], function(bot, message) {
+    var msg1 = 'アーアーアーアー　アッーーー！\nウェネバハぺツー　デットビーティー\nユーメーナ　ペーパボーイ　イーベンティービー\nエビウェイユーロー　エビウェーイ\nイザハー　イザハー\nアキーノホン　ホンチュー\nエビウェイユーロー　エビウェイ\nイザ　メイス　サンバニドゥ　ニージュー\nエビウェイユーロー　ゥロシャーペーン ロードノーン\nクライドゥ　ウエイジュー\nトュケピドゥ　オーーン\nエビウェイユー　\nエビウェーユー　オーーン\nドゥビドゥ　バッバダー\n';
+    var msg2 = 'https://youtu.be/oz3c4Wyr-uw';
+    bot.reply(message, msg1);
+    bot.reply(message, msg2);
+});
 
+controller.hears(['ゲーム'], ['direct_mention','direct_message','mention'], function(bot, message) {
+    bot.reply(message, 'http://endo-bot.azurewebsites.net/img/kanna01.jpg');
+});
+    
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
 
     bot.api.reactions.add({
