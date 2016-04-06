@@ -59,6 +59,10 @@ controller.hears(['フルハウスのテーマ'], ['ambient','direct_message'], 
     bot.reply(message, msg2);
 });
 
+controller.hears(['豆', '豆っち', 'まめ', 'まめっち'], ['ambient','direct_message'], function(bot, message) {
+    bot.reply(message, 'はい？');
+});
+
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
 
     bot.api.reactions.add({
