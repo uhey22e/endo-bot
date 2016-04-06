@@ -47,7 +47,7 @@ controller.hears(['ゲーム'], ['direct_mention','direct_message','mention'], f
     bot.reply(message, 'https://www.gamecity.ne.jp/' + random);
 });
 
-controller.hears(['遠藤'], ['ambient'], function(bot, message) {
+controller.hears(['遠藤'], ['ambient', 'direct_message'], function(bot, message) {
     bot.reply(message, 'なに？');
     bot.reply(message, 'てかさぁ，Timaiぃ');
 });
