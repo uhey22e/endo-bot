@@ -2,7 +2,7 @@
   "name": "endo-bot",
   "version": "0.0.1",
   "description": "",
-  "main": "endo.js",
+  "main": "server.js",
   "author": "uhey",
   "repository": {
     "type": "git",
@@ -29,6 +29,6 @@
   "scripts": {
     "pretest": "jscs ./lib/",
     "test": "mocha tests/*.js",
-    "start": "node endo.js"
+    "start": "node server.js"
   }
 }
