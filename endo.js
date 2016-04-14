@@ -63,6 +63,10 @@ controller.hears(['豆', '豆っち', 'まめ', 'まめっち'], ['ambient','dir
     bot.reply(message, 'はい？');
 });
 
+controller.hears(['つらい', '疲れた', 'つかれた'], ['ambient','direct_message'], function(bot, message) {
+    bot.reply(message, 'がんばれ♡がんばれ♡');
+});
+
 controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
 
     bot.api.reactions.add({
