@@ -63,7 +63,7 @@ controller.hears(['豆', '豆っち', 'まめ', 'まめっち'], ['ambient','dir
     bot.reply(message, 'はい？');
 });
 
-controller.hears(['つらい', '疲れた', 'つかれた'], ['ambient','direct_message'], function(bot, message) {
+controller.hears(['つらい', '疲れた', 'つかれた', '死にたい', 'しにたい'], ['ambient','direct_message'], function(bot, message) {
     bot.reply(message, 'がんばれ♡がんばれ♡');
 });
 
