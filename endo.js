@@ -7,15 +7,19 @@ if (!process.env.token) {
     process.exit(1);
 }
 
+process.on('uncaughtException', function(err) {
+    console.log(err);
+});
+
 var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 
 var controller = Botkit.slackbot({
-    debug: true,
+    debug: false,
 });
 
 var bot = controller.spawn({
-    token: process.env.token
+    token: process.env.SLACKBOT_TOKEN
 }).startRTM();
 
 /******************************************************************************/
@@ -24,7 +28,7 @@ controller.hears(['調子'], ['direct_mention','direct_message','mention'], func
     bot.reply(message, '今起きた');
 });
 
-controller.hears(['進捗'], 'direct_mention,direct_message,mention', function(bot, message) {
+controller.hears(['進捗どう'], 'direct_mention,direct_message,mention', function(bot, message) {
     bot.reply(message, 'ダメっすねー');
 });
 
@@ -92,7 +96,7 @@ controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', funct
 // webserver settings
 /******************************************************************************/
 
-controller.setupWebserver(process.env.port, (err, webserver) => {
+controller.setupWebserver(process.env.PORT || 3000, (err, webserver) => {
     webserver.get('/', (req, res) => {
         res.send('Endo-Bot is running now.');
     });
