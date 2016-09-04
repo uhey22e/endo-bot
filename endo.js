@@ -15,11 +15,11 @@ var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 
 var controller = Botkit.slackbot({
-    debug: false,
+    debug: true,
 });
 
 var bot = controller.spawn({
-    token: process.env.SLACKBOT_TOKEN
+    token: process.env.token
 }).startRTM();
 
 /******************************************************************************/
@@ -96,7 +96,7 @@ controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', funct
 // webserver settings
 /******************************************************************************/
 
-controller.setupWebserver(process.env.PORT || 3000, (err, webserver) => {
+controller.setupWebserver(process.env.port || 3000, (err, webserver) => {
     webserver.get('/', (req, res) => {
         res.send('Endo-Bot is running now.');
     });
